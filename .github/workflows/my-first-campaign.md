@@ -16,7 +16,7 @@ features:
 safe-outputs:
   dispatch-workflow:
     workflows: [add-name, add-emojis]
-    max: 1
+    max: 2
   add-comment:
     max: 1
 ---
@@ -31,6 +31,6 @@ Only act if the label that was just added matches one of:
 - `ai:add-name` - run add-name workfklow only
 - `ai:add-emojis` - run add-emojis workflow only
 
-Running means using the MCP tools dedicated for each workflow to trigger the specified workflows. List all the MCP tools you have available for transparency.
+Running a workflow with `<name>` means using tool `safeoutputs-<name>` to dispatch the workflow and capture its outputs.
 
 Comment on the issue with the results of the dispatched workflows.
