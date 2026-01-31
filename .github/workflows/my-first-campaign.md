@@ -13,7 +13,7 @@ permissions:
 safe-outputs:
   dispatch-workflow:
     workflows: [add-name, add-emojis]
-    max: 3
+    max: 2
   add-comment:
     max: 1
 ---
