@@ -33,21 +33,19 @@ Only act if the label that was just added matches one of:
 
 ## Instructions
 
-This workflow demonstrates the `dispatch-workflow` safe output capability. You can trigger other workflows by outputting a `dispatch_workflow` request.
+You can run workflows by sending a `dispatch_workflow` tool request.
 
-### Example: Dispatch a workflow
+For example, to dispatch the `add-name` workflow with input parameters, the tool request would look like:
 
-To dispatch the `add-name` workflow with input parameters, output a JSON entry like this:
-
-```json
-{
+```js
+dispatch_workflow({
   "type": "dispatch_workflow",
   "workflow_name": "add-name",
   "inputs": {
     "campaign_id": "my-first-campaign",
     "payload": "{\"text\": \"your text\"}"
   }
-}
+})
 ```
 
 The available workflows you can dispatch are: `add-name`, `add-emojis`.
