@@ -21,7 +21,7 @@
 #
 # Prints a greeting to you and adds some celebratory emojis.
 #
-# frontmatter-hash: bd1d5e990ba946228439b6c5567d3a21abe1055a48d1a79237b20b1e390cb373
+# frontmatter-hash: d38e22dbea8c96b96b3709c06fd36e7583e9f6ef0e231ab0de58c8463ce764fe
 
 name: "My First Campaign"
 "on":
@@ -68,6 +68,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+      issues: read
     env:
       DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
       GH_AW_ASSETS_ALLOWED_EXTS: ""

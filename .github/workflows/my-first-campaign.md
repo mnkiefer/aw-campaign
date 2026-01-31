@@ -6,6 +6,10 @@ on:
     types: [labeled]
   workflow_dispatch:
 
+permissions:
+  contents: read
+  issues: read
+
 safe-outputs:
   dispatch-workflow:
     workflows: [add-name, add-emojis]
