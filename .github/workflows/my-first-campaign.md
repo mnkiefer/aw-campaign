@@ -16,7 +16,7 @@ features:
 safe-outputs:
   dispatch-workflow:
     workflows: [add-name, add-emojis]
-    max: 1
+    max: 2
   add-comment:
     max: 1
 ---
@@ -44,3 +44,6 @@ To run workfklows, use safeoutputs_dispatch-workflow:
 ```
 
 Comment on the issue with the results of the dispatched workflows.
+
+Provide me with a full debug log why you could not trigger workflows if it fails.
+Via safe outputs `dispatch-workflow`, we should have the listed workflows triggered.
