@@ -11,7 +11,7 @@ permissions:
   issues: read
 
 features:
-  action-tag: "65743607a719c1d96808ef36504685c275d3c8af"
+  action-tag: "59b5eaa9e5323e3f2d8652bb5e2a75cbc07a3d89"
 
 safe-outputs:
   dispatch-workflow:
