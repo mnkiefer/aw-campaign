@@ -24,8 +24,8 @@ safe-outputs:
 
 Only act if the label that was just added matches one of:
 
-- `ai:my-first-campaign` - dispatch ALL workflows
-- `ai:add-name` - dispatch add-name workfklow only
-- `ai:add-emojis` - dispatch add-emojis workflow only
+- `ai:my-first-campaign` - run ALL workflows
+- `ai:add-name` - run add-name workfklow only
+- `ai:add-emojis` - run add-emojis workflow only
 
 Comment on the issue with the results of the dispatched workflows.
