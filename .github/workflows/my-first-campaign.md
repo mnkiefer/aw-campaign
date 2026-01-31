@@ -16,7 +16,7 @@ features:
 safe-outputs:
   dispatch-workflow:
     workflows: [add-name, add-emojis]
-    max: 2
+    max: 1
   add-comment:
     max: 1
 ---
@@ -31,6 +31,16 @@ Only act if the label that was just added matches one of:
 - `ai:add-name` - run add-name workfklow only
 - `ai:add-emojis` - run add-emojis workflow only
 
-Running a workflow with `<name>` means using tool `safeoutputs-<name>` to dispatch the workflow and capture its outputs.
+To run workfklows, use safeoutputs_dispatch-workflow:
+
+```json
+{
+  "type": "dispatch_workflow",
+  "workflow_name": "<workflow-name>",
+  "inputs": {
+    "payload": "{ ... }"
+  }
+}
+```
 
 Comment on the issue with the results of the dispatched workflows.
