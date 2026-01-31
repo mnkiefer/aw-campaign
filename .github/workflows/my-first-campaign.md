@@ -13,9 +13,9 @@ permissions:
 safe-outputs:
   dispatch-workflow:
     workflows: [add-name, add-emojis]
-    max: 2
-
-
+    max: 3
+  add-comment:
+    max: 1
 ---
 
 # Celebrate your first campaign
