@@ -10,6 +10,9 @@ permissions:
   contents: read
   issues: read
 
+features:
+  action-tag: "65743607a719c1d96808ef36504685c275d3c8af"
+
 safe-outputs:
   dispatch-workflow:
     workflows: [add-name, add-emojis]
