@@ -16,7 +16,7 @@ features:
 safe-outputs:
   dispatch-workflow:
     workflows: [add-name, add-emojis]
-    max: 2
+    max: 1
   add-comment:
     max: 1
 ---
@@ -31,19 +31,23 @@ Only act if the label that was just added matches one of:
 - `ai:add-name` - run add-name workfklow only
 - `ai:add-emojis` - run add-emojis workflow only
 
-To run workfklows, use safeoutputs_dispatch-workflow:
+## Instructions
+
+This workflow demonstrates the `dispatch-workflow` safe output capability. You can trigger other workflows by outputting a `dispatch_workflow` request.
+
+### Example: Dispatch a workflow
+
+To dispatch the `add-name` workflow with input parameters, output a JSON entry like this:
 
 ```json
 {
   "type": "dispatch_workflow",
-  "workflow_name": "<workflow-name>",
+  "workflow_name": "add-name",
   "inputs": {
-    "payload": "{ ... }"
+    "campaign_id": "my-first-campaign",
+    "payload": "{\"text\": \"your text\"}"
   }
 }
 ```
 
-Comment on the issue with the results of the dispatched workflows.
-
-Provide me with a full debug log why you could not trigger workflows if it fails.
-Via safe outputs `dispatch-workflow`, we should have the listed workflows triggered.
+The available workflows you can dispatch are: `add-name`, `add-emojis`.
