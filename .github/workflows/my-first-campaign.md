@@ -17,7 +17,7 @@ features:
 safe-outputs:
   dispatch-workflow:
     workflows: [add-emojis]
-    max: 2
+    max: 1
 ---
 
 # Celebrate your first campaign
