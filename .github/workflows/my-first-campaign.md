@@ -16,7 +16,7 @@ features:
 safe-outputs:
   dispatch-workflow:
     workflows: [add-name, add-emojis]
-    max: 2
+    max: 1
   add-comment:
     max: 1
 ---
@@ -28,5 +28,33 @@ safe-outputs:
 Only act if the label that was just added matches one of:
 
 - `ai:my-first-campaign` - run ALL workflows
-- `ai:add-name` - run add-name workfklow only
+- `ai:add-name` - run add-name workflow only
 - `ai:add-emojis` - run add-emojis workflow only
+
+## Instructions
+
+You can run workflows either by calling the workflow MCP tool directly (preferred) or by emitting a `dispatch_workflow` request.
+
+### Example Tool Call (preferred)
+
+The MCP tool is named after the workflow (underscores replace hyphens):
+
+```javascript
+add_name({
+  text: "<text to add your name to>"
+})
+```
+
+### Or: Agent dispatch format
+
+```json
+{
+  "type": "dispatch_workflow",
+  "workflow_name": "add-name",
+  "inputs": {
+    "text": "<text to add your name to>"
+  }
+}
+```
+
+The available workflows you can dispatch are: `add-name`, `add-emojis`.
