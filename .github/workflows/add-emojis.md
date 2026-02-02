@@ -20,7 +20,7 @@ features:
 
 safe-outputs:
   add-comment:
-    max: 1
+    max: 2
 ---
 
 # Add Emojis
