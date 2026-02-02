@@ -17,7 +17,7 @@ features:
 safe-outputs:
   dispatch-workflow:
     workflows: [add-emojis]
-    max: 1
+    max: 2
 ---
 
 # Celebrate your first campaign
@@ -26,8 +26,8 @@ safe-outputs:
 
 Only act if the label that was just added matches one of:
 
-- `ai:my-first-campaign` - run ALL workflows
-- `ai:add-emojis` - run add-emojis workflow only
+- `ai:my-first-campaign` - dispatches workflow `add-emojis` with text as being the issue body and the issue number
+- `ai:add-emojis` - run add-emojis workflow with text "Hi, how are you doing today?" and the issue number
 
 ## Instructions
 
@@ -40,7 +40,7 @@ The MCP tool is named after the workflow (underscores replace hyphens):
 ```javascript
 add_emojis({
   inputs: {
-    text: "<text>",
+    text: "<issue_body>",
     number: <issue_number>
   }
 })
@@ -53,7 +53,7 @@ add_emojis({
   "type": "dispatch_workflow",
   "workflow_name": "add-emojis",
   "inputs": {
-    "text": "<text>",
+    "text": "<issue_body>",
     "number": <issue_number>
   }
 }
