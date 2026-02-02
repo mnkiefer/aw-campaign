@@ -16,7 +16,7 @@ features:
 safe-outputs:
   dispatch-workflow:
     workflows: [add-name, add-emojis]
-    max: 2
+    max: 3
   add-comment:
     max: 1
 ---
@@ -35,13 +35,15 @@ Only act if the label that was just added matches one of:
 
 You can run workflows either by calling the workflow MCP tool directly (preferred) or by emitting a `dispatch_workflow` request.
 
-### Example Tool Call (preferred)
+### Example Tool Call
 
 The MCP tool is named after the workflow (underscores replace hyphens):
 
 ```javascript
 add_name({
-  text: "<text to add your name to>"
+  inputs: {
+    text: "<text to add your name to>"
+  }
 })
 ```
 
