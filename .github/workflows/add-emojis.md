@@ -25,4 +25,4 @@ safe-outputs:
 
 # Add Emojis
 
-Reply to the text input and add emojis of joy and celebration.
+Reply to the text input received {{ inputs.text }} and add emojis of joy and celebration on the issue or PR number received {{ inputs.number }}.
