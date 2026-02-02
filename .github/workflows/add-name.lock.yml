@@ -19,10 +19,11 @@
 #   gh aw compile
 # For more information: https://github.com/githubnext/gh-aw/blob/main/.github/aw/github-agentic-workflows.md
 #
+# Greets the actor by name.
 #
-# frontmatter-hash: 50daa139c0cac0c6d3a7b3dd7bbb325bbb04df5372f60f5ddcfa9aaef9b92e83
+# frontmatter-hash: b287e978377de4fb6a3fe2ef5ba94af05f0e1c252fd22d4b7169da80f01d7fe4
 
-name: "Greet the actor"
+name: "Greet the Actor"
 "on":
   workflow_dispatch:
     inputs:
@@ -34,7 +35,7 @@ permissions: {}
 concurrency:
   group: "gh-aw-${{ github.workflow }}"
 
-run-name: "Greet the actor"
+run-name: "Greet the Actor"
 
 jobs:
   activation:
@@ -71,6 +72,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+      pull-requests: read
     concurrency:
       group: "gh-aw-copilot-${{ github.workflow }}"
     outputs:
@@ -194,7 +196,7 @@ jobs:
               model: process.env.GH_AW_MODEL_AGENT_COPILOT || "",
               version: "",
               agent_version: "0.0.400",
-              workflow_name: "Greet the actor",
+              workflow_name: "Greet the Actor",
               experimental: false,
               supports_tools_allowlist: true,
               supports_http_transport: true,

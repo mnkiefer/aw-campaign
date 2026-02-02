@@ -9,6 +9,7 @@ on:
 permissions:
   contents: read
   issues: read
+  pull-requests: read
 
 features:
   action-tag: "bb15d929e3d597412c29a9349cf1fe24484d550c"
@@ -16,9 +17,7 @@ features:
 safe-outputs:
   dispatch-workflow:
     workflows: [add-name, add-emojis]
-    max: 3
-  add-comment:
-    max: 1
+    max: 2
 ---
 
 # Celebrate your first campaign
