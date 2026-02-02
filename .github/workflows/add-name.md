@@ -7,6 +7,9 @@ on:
       text:
         required: true
 
+features:
+  action-tag: "bb15d929e3d597412c29a9349cf1fe24484d550c"
+
 permissions:
   contents: read
   pull-requests: read

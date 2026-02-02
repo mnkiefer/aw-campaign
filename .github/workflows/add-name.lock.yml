@@ -21,7 +21,7 @@
 #
 # Greets the actor by name.
 #
-# frontmatter-hash: b287e978377de4fb6a3fe2ef5ba94af05f0e1c252fd22d4b7169da80f01d7fe4
+# frontmatter-hash: 37f039d31544309a5a0877c0d32c47e7aef35899f764cab68ed96001dde64cab
 
 name: "Greet the Actor"
 "on":
@@ -46,14 +46,8 @@ jobs:
       comment_id: ""
       comment_repo: ""
     steps:
-      - name: Checkout actions folder
-        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
-        with:
-          sparse-checkout: |
-            actions
-          persist-credentials: false
       - name: Setup Scripts
-        uses: ./actions/setup
+        uses: githubnext/gh-aw/actions/setup@bb15d929e3d597412c29a9349cf1fe24484d550c # bb15d929e3d597412c29a9349cf1fe24484d550c
         with:
           destination: /opt/gh-aw/actions
       - name: Check workflow file timestamps
@@ -79,14 +73,8 @@ jobs:
       model: ${{ steps.generate_aw_info.outputs.model }}
       secret_verification_result: ${{ steps.validate-secret.outputs.verification_result }}
     steps:
-      - name: Checkout actions folder
-        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
-        with:
-          sparse-checkout: |
-            actions
-          persist-credentials: false
       - name: Setup Scripts
-        uses: ./actions/setup
+        uses: githubnext/gh-aw/actions/setup@bb15d929e3d597412c29a9349cf1fe24484d550c # bb15d929e3d597412c29a9349cf1fe24484d550c
         with:
           destination: /opt/gh-aw/actions
       - name: Checkout repository

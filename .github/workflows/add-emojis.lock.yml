@@ -21,7 +21,7 @@
 #
 # Adds celebratory emojis to the provided text.
 #
-# frontmatter-hash: 7cdc85425126579558c7354e4d7f316e0c7ab7ed0752ced2121cccd63412146a
+# frontmatter-hash: ae27c45a6ac377a890731e0ef3883c2429bbd7be9409fad124cb73b800ab1b39
 
 name: "Add Emojis"
 "on":
@@ -46,14 +46,8 @@ jobs:
       comment_id: ""
       comment_repo: ""
     steps:
-      - name: Checkout actions folder
-        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
-        with:
-          sparse-checkout: |
-            actions
-          persist-credentials: false
       - name: Setup Scripts
-        uses: ./actions/setup
+        uses: githubnext/gh-aw/actions/setup@bb15d929e3d597412c29a9349cf1fe24484d550c # bb15d929e3d597412c29a9349cf1fe24484d550c
         with:
           destination: /opt/gh-aw/actions
       - name: Check workflow file timestamps
@@ -91,14 +85,8 @@ jobs:
       output_types: ${{ steps.collect_output.outputs.output_types }}
       secret_verification_result: ${{ steps.validate-secret.outputs.verification_result }}
     steps:
-      - name: Checkout actions folder
-        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
-        with:
-          sparse-checkout: |
-            actions
-          persist-credentials: false
       - name: Setup Scripts
-        uses: ./actions/setup
+        uses: githubnext/gh-aw/actions/setup@bb15d929e3d597412c29a9349cf1fe24484d550c # bb15d929e3d597412c29a9349cf1fe24484d550c
         with:
           destination: /opt/gh-aw/actions
       - name: Checkout repository
@@ -724,14 +712,8 @@ jobs:
       tools_reported: ${{ steps.missing_tool.outputs.tools_reported }}
       total_count: ${{ steps.missing_tool.outputs.total_count }}
     steps:
-      - name: Checkout actions folder
-        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
-        with:
-          sparse-checkout: |
-            actions
-          persist-credentials: false
       - name: Setup Scripts
-        uses: ./actions/setup
+        uses: githubnext/gh-aw/actions/setup@bb15d929e3d597412c29a9349cf1fe24484d550c # bb15d929e3d597412c29a9349cf1fe24484d550c
         with:
           destination: /opt/gh-aw/actions
       - name: Debug job inputs
@@ -829,14 +811,8 @@ jobs:
     outputs:
       success: ${{ steps.parse_results.outputs.success }}
     steps:
-      - name: Checkout actions folder
-        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
-        with:
-          sparse-checkout: |
-            actions
-          persist-credentials: false
       - name: Setup Scripts
-        uses: ./actions/setup
+        uses: githubnext/gh-aw/actions/setup@bb15d929e3d597412c29a9349cf1fe24484d550c # bb15d929e3d597412c29a9349cf1fe24484d550c
         with:
           destination: /opt/gh-aw/actions
       - name: Download agent artifacts
@@ -945,14 +921,8 @@ jobs:
       process_safe_outputs_processed_count: ${{ steps.process_safe_outputs.outputs.processed_count }}
       process_safe_outputs_temporary_id_map: ${{ steps.process_safe_outputs.outputs.temporary_id_map }}
     steps:
-      - name: Checkout actions folder
-        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
-        with:
-          sparse-checkout: |
-            actions
-          persist-credentials: false
       - name: Setup Scripts
-        uses: ./actions/setup
+        uses: githubnext/gh-aw/actions/setup@bb15d929e3d597412c29a9349cf1fe24484d550c # bb15d929e3d597412c29a9349cf1fe24484d550c
         with:
           destination: /opt/gh-aw/actions
       - name: Download agent output artifact
