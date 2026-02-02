@@ -42,8 +42,7 @@ dispatch_workflow({
   "type": "dispatch_workflow",
   "workflow_name": "add-name",
   "inputs": {
-    "campaign_id": "my-first-campaign",
-    "payload": "{\"text\": \"your text\"}"
+    "text": "<text to add your name to>",
   }
 })
 ```
