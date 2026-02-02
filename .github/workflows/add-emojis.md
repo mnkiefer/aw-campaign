@@ -6,6 +6,10 @@ on:
     inputs:
       text:
         required: true
+        type: string
+      number:
+        required: true
+        type: number
 
 permissions:
   contents: read

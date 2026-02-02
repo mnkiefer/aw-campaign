@@ -21,14 +21,18 @@
 #
 # Replies to the issue with celebratory emojis.
 #
-# frontmatter-hash: 2d11faced4244f1f77a344398a692757b02f35344103ab5a6e81c0df7245a60b
+# frontmatter-hash: 3c4021be86d60272dd8d0a69220a3f1eab956734c6e6bd6097d4c6dc604f9c92
 
 name: "Add Emojis"
 "on":
   workflow_dispatch:
     inputs:
+      number:
+        required: true
+        type: number
       text:
         required: true
+        type: string
 
 permissions: {}
 

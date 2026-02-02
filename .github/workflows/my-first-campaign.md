@@ -40,7 +40,8 @@ The MCP tool is named after the workflow (underscores replace hyphens):
 ```javascript
 add_emojis({
   inputs: {
-    text: "<text>"
+    text: "<text>",
+    number: <issue_number>
   }
 })
 ```
@@ -52,7 +53,8 @@ add_emojis({
   "type": "dispatch_workflow",
   "workflow_name": "add-emojis",
   "inputs": {
-    "text": "<text>"
+    "text": "<text>",
+    "number": <issue_number>
   }
 }
 ```

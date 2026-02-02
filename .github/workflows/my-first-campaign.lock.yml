@@ -226,12 +226,17 @@ jobs:
               "inputSchema": {
                 "additionalProperties": false,
                 "properties": {
+                  "number": {
+                    "description": "Input parameter 'number' for workflow add-emojis",
+                    "type": "number"
+                  },
                   "text": {
                     "description": "Input parameter 'text' for workflow add-emojis",
                     "type": "string"
                   }
                 },
                 "required": [
+                  "number",
                   "text"
                 ],
                 "type": "object"
