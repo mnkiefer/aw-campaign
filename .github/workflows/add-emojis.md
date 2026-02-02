@@ -20,9 +20,9 @@ features:
 
 safe-outputs:
   add-comment:
-    max: 1
+    max: 2
 ---
 
 # Add Emojis
 
-Reply to the text input received {{ inputs.text }} and add emojis of joy and celebration on the issue or PR number received {{ inputs.number }}.
+Reply to the text input question received {{ inputs.text }} with an answer including emojis of joy and celebration on the issue received {{ inputs.number }}.
