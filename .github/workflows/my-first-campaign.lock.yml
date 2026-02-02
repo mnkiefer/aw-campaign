@@ -21,7 +21,7 @@
 #
 # Prints a greeting to you and adds some celebratory emojis.
 #
-# frontmatter-hash: 8b1bc7c902e7825d83fcdb9e874bac40d129a50f6e8a031a6d8ff26987de2c64
+# frontmatter-hash: 8b8c10a89c8c0d7562d5b31ee257dabc0220fa9263424bc521b58da7d498f659
 
 name: "My First Campaign"
 "on":
@@ -146,7 +146,7 @@ jobs:
           mkdir -p /tmp/gh-aw/safeoutputs
           mkdir -p /tmp/gh-aw/mcp-logs/safeoutputs
           cat > /opt/gh-aw/safeoutputs/config.json << 'EOF'
-          {"add_comment":{"max":1},"dispatch_workflow":{"max":2,"workflow_files":{"add-emojis":".lock.yml","add-name":".lock.yml"},"workflows":["add-name","add-emojis"]},"missing_data":{},"missing_tool":{},"noop":{"max":1}}
+          {"add_comment":{"max":1},"dispatch_workflow":{"max":1,"workflow_files":{"add-emojis":".lock.yml","add-name":".lock.yml"},"workflows":["add-name","add-emojis"]},"missing_data":{},"missing_tool":{},"noop":{"max":1}}
           EOF
           cat > /opt/gh-aw/safeoutputs/tools.json << 'EOF'
           [
@@ -998,7 +998,7 @@ jobs:
         uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
         env:
           GH_AW_AGENT_OUTPUT: ${{ env.GH_AW_AGENT_OUTPUT }}
-          GH_AW_SAFE_OUTPUTS_HANDLER_CONFIG: "{\"add_comment\":{\"max\":1},\"dispatch_workflow\":{\"max\":2,\"workflow_files\":{\"add-emojis\":\".lock.yml\",\"add-name\":\".lock.yml\"},\"workflows\":[\"add-name\",\"add-emojis\"]},\"missing_data\":{},\"missing_tool\":{}}"
+          GH_AW_SAFE_OUTPUTS_HANDLER_CONFIG: "{\"add_comment\":{\"max\":1},\"dispatch_workflow\":{\"max\":1,\"workflow_files\":{\"add-emojis\":\".lock.yml\",\"add-name\":\".lock.yml\"},\"workflows\":[\"add-name\",\"add-emojis\"]},\"missing_data\":{},\"missing_tool\":{}}"
         with:
           github-token: ${{ secrets.GH_AW_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
           script: |
