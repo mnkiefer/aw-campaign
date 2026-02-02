@@ -553,16 +553,6 @@ The YAML frontmatter supports these fields:
         title-prefix: "[ai] "           # Optional: prefix for project titles
     ```
     Not supported for cross-repository operations.
-  - `copy-project:` - Copy GitHub Projects V2
-    ```yaml
-    safe-outputs:
-      copy-project:
-        max: 1                          # Optional: max copies (default: 1)
-        github-token: ${{ secrets.PROJECTS_PAT }}  # Optional: token with projects:write
-        source-project: "https://github.com/orgs/myorg/projects/42"  # Optional: source project URL
-        target-owner: "org-or-user"     # Optional: owner for copied project
-    ```
-    Not supported for cross-repository operations.
   - `update-project:` - Manage GitHub Projects boards
     ```yaml
     safe-outputs:
@@ -1576,7 +1566,7 @@ gh aw logs --start-date -1mo         # Last month's runs
 gh aw logs --start-date -2w3d        # 2 weeks 3 days ago
 
 # Filter staged logs
-gw aw logs --no-staged               # ignore workflows with safe output staged true
+gh aw logs --no-staged               # ignore workflows with safe output staged true
 
 # Download to custom directory
 gh aw logs -o ./workflow-logs
