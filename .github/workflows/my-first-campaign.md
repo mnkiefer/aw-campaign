@@ -27,7 +27,6 @@ safe-outputs:
 Only act if the label that was just added matches one of:
 
 - `ai:my-first-campaign` - run ALL workflows
-- `ai:add-name` - run add-name workflow only
 - `ai:add-emojis` - run add-emojis workflow only
 
 ## Instructions
@@ -39,9 +38,9 @@ You can run workflows either by calling the workflow MCP tool directly (preferre
 The MCP tool is named after the workflow (underscores replace hyphens):
 
 ```javascript
-add_name({
+add_emojis({
   inputs: {
-    text: "<text to add your name to>"
+    text: "<text>"
   }
 })
 ```
@@ -51,11 +50,9 @@ add_name({
 ```json
 {
   "type": "dispatch_workflow",
-  "workflow_name": "add-name",
+  "workflow_name": "add-emojis",
   "inputs": {
-    "text": "<text to add your name to>"
+    "text": "<text>"
   }
 }
 ```
-
-The available workflows you can dispatch are: `add-name`, `add-emojis`.

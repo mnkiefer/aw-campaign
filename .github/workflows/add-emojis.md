@@ -1,6 +1,6 @@
 ---
 name: Add Emojis
-description:  Adds celebratory emojis to the provided text.
+description: Replies to the issue with celebratory emojis.
 on:
   workflow_dispatch:
     inputs:
@@ -21,4 +21,4 @@ safe-outputs:
 
 # Add Emojis
 
-Add emojis of joy and celebration to the end of the input text and reply to the issue.
+Reply to the text input and add emojis of joy and celebration.

@@ -19,9 +19,9 @@
 #   gh aw compile
 # For more information: https://github.com/githubnext/gh-aw/blob/main/.github/aw/github-agentic-workflows.md
 #
-# Adds celebratory emojis to the provided text.
+# Replies to the issue with celebratory emojis.
 #
-# frontmatter-hash: ae27c45a6ac377a890731e0ef3883c2429bbd7be9409fad124cb73b800ab1b39
+# frontmatter-hash: 2d11faced4244f1f77a344398a692757b02f35344103ab5a6e81c0df7245a60b
 
 name: "Add Emojis"
 "on":
@@ -836,7 +836,7 @@ jobs:
         uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
         env:
           WORKFLOW_NAME: "Add Emojis"
-          WORKFLOW_DESCRIPTION: "Adds celebratory emojis to the provided text."
+          WORKFLOW_DESCRIPTION: "Replies to the issue with celebratory emojis."
           HAS_PATCH: ${{ needs.agent.outputs.has_patch }}
         with:
           script: |
