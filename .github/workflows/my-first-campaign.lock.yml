@@ -21,7 +21,7 @@
 #
 # Prints a greeting to you and adds some celebratory emojis.
 #
-# frontmatter-hash: 2b719e6d32e8edd1af315a243f05b129fba42ea852505eb919069f1eaa9b9333
+# frontmatter-hash: 858576e372c27ca2913e28e86030f304b0b26a1fe7d276b65d454e6045883c5e
 
 name: "My First Campaign"
 "on":
@@ -49,7 +49,7 @@ jobs:
       comment_repo: ""
     steps:
       - name: Setup Scripts
-        uses: githubnext/gh-aw/actions/setup@a7c1a95fbe623e7f4b0983621153a3a38892c4da # a7c1a95fbe623e7f4b0983621153a3a38892c4da
+        uses: githubnext/gh-aw/actions/setup@bb15d929e3d597412c29a9349cf1fe24484d550c # bb15d929e3d597412c29a9349cf1fe24484d550c
         with:
           destination: /opt/gh-aw/actions
       - name: Check workflow file timestamps
@@ -86,7 +86,7 @@ jobs:
       secret_verification_result: ${{ steps.validate-secret.outputs.verification_result }}
     steps:
       - name: Setup Scripts
-        uses: githubnext/gh-aw/actions/setup@a7c1a95fbe623e7f4b0983621153a3a38892c4da # a7c1a95fbe623e7f4b0983621153a3a38892c4da
+        uses: githubnext/gh-aw/actions/setup@bb15d929e3d597412c29a9349cf1fe24484d550c # bb15d929e3d597412c29a9349cf1fe24484d550c
         with:
           destination: /opt/gh-aw/actions
       - name: Checkout repository
@@ -749,7 +749,7 @@ jobs:
       total_count: ${{ steps.missing_tool.outputs.total_count }}
     steps:
       - name: Setup Scripts
-        uses: githubnext/gh-aw/actions/setup@a7c1a95fbe623e7f4b0983621153a3a38892c4da # a7c1a95fbe623e7f4b0983621153a3a38892c4da
+        uses: githubnext/gh-aw/actions/setup@bb15d929e3d597412c29a9349cf1fe24484d550c # bb15d929e3d597412c29a9349cf1fe24484d550c
         with:
           destination: /opt/gh-aw/actions
       - name: Debug job inputs
@@ -846,7 +846,7 @@ jobs:
       success: ${{ steps.parse_results.outputs.success }}
     steps:
       - name: Setup Scripts
-        uses: githubnext/gh-aw/actions/setup@a7c1a95fbe623e7f4b0983621153a3a38892c4da # a7c1a95fbe623e7f4b0983621153a3a38892c4da
+        uses: githubnext/gh-aw/actions/setup@bb15d929e3d597412c29a9349cf1fe24484d550c # bb15d929e3d597412c29a9349cf1fe24484d550c
         with:
           destination: /opt/gh-aw/actions
       - name: Download agent artifacts
@@ -941,7 +941,7 @@ jobs:
       activated: ${{ steps.check_membership.outputs.is_team_member == 'true' }}
     steps:
       - name: Setup Scripts
-        uses: githubnext/gh-aw/actions/setup@a7c1a95fbe623e7f4b0983621153a3a38892c4da # a7c1a95fbe623e7f4b0983621153a3a38892c4da
+        uses: githubnext/gh-aw/actions/setup@bb15d929e3d597412c29a9349cf1fe24484d550c # bb15d929e3d597412c29a9349cf1fe24484d550c
         with:
           destination: /opt/gh-aw/actions
       - name: Check team membership for workflow
@@ -979,7 +979,7 @@ jobs:
       process_safe_outputs_temporary_id_map: ${{ steps.process_safe_outputs.outputs.temporary_id_map }}
     steps:
       - name: Setup Scripts
-        uses: githubnext/gh-aw/actions/setup@a7c1a95fbe623e7f4b0983621153a3a38892c4da # a7c1a95fbe623e7f4b0983621153a3a38892c4da
+        uses: githubnext/gh-aw/actions/setup@bb15d929e3d597412c29a9349cf1fe24484d550c # bb15d929e3d597412c29a9349cf1fe24484d550c
         with:
           destination: /opt/gh-aw/actions
       - name: Download agent output artifact
